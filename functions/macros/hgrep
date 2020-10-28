@@ -1,5 +1,10 @@
 #!/bin/bash
 
+### History Grep command
+### Will grep something from your history 
+### Example usage: hgrep python
+### ^ Will list anything in your history containing 'python'
+
 hgrep () {
   history | grep $1
 }
