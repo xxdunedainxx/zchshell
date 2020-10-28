@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# This function can be used to progammatically determine your root bash profile source file
+# All macro functions should be injected into this file in order to work properly for a login shell 
+
+bash_rc() {
+ if [[ $SHELL == '/bin/zsh' ]]; then
+  export BASH_RC='~/.zshrc'
+ else
+  export BASH_RC='~/.bashrc'
+ fi
+}
