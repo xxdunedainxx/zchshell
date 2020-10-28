@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# macro on top of kubetail, will tail current namespace
+
+ktp () {
+  : ${KUBE_NS:=default}
+  echo "NOTE: getting pods based on 'KUBE_NS' var. Namespace: '$KUBE_NS'"
+  kubectl get pods -n $KUBE_NS
+}
