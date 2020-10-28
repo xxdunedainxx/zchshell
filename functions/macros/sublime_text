@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Set an alias for sublime text editor 
+# usage of alias: subl . <-- will open up sublime text in current directory 
+
+sublime_text() {
+ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+}
