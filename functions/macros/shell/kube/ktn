@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# macro on top of kubetail, will tail current namespace
+: ${KUBE_NS:=default}
+
+ktn () {
+  
+  echo "NOTE: tailing set based on 'KUBE_NS' var. Tailing namespace: '$KUBE_NS'"
+  kubetail -n $KUBE_NS
+}
