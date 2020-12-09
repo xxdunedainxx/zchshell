@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# MacOS specific. Start a new terminal from current directory
+
+shellReset() {
+  open -a Terminal "`pwd`"
+  exit
+}
