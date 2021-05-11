@@ -1,0 +1,23 @@
+#! /bin/bash
+
+: ${LOG_LEVEL:='DEBUG'}
+
+setLogLevel() {
+  LOG_LEVEL=$1
+}
+
+log() {
+  echo '??'
+  # $1 == level
+  # $2 == log
+  if [[ "${1}" == 'ERROR' ]]
+   then
+    printf "[${1}::$(date ${APP_TIMESTAMP_FMT})] ${2}\n" >&2
+  fi 
+
+}
+
+logCommand() {
+  log "INFO" "${*}"
+  "${@}"
+}

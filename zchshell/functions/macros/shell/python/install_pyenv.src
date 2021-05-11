@@ -8,6 +8,6 @@ bash_rc() {
  fi
 }
 
-curl https://pyenv.run | bash
+# curl https://pyenv.run | bash
 
-echo "export PATH=\"$HOME/.pyenv/bin:$PATH\"" | $BASH_RC
+# echo "export PATH=\"$HOME/.pyenv/bin:$PATH\"" | $BASH_RC

@@ -1,0 +1,22 @@
+#! /bin/bash
+
+load_relative_files() {
+  # $1 == base 
+  # $2 == condition
+  # $3 == not condition
+
+  # find "$(dirname "${1}")" -name $2 -type f
+
+  eval "$(
+    printf \
+      'source %s\n' \
+      $(
+        find \
+          "$(dirname "${1}")" \
+          -type f \
+          -name $2 \
+          ! -name $3 \
+          ! -name 'load_relative_files.src' 
+      )
+  )"
+}
