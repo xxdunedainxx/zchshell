@@ -4,3 +4,4 @@ sh "${ZCHSHELL_INSTALL_PATH}/zchshell/load.sh"
 
 bash_rc
 sublime_text
+setupDcat

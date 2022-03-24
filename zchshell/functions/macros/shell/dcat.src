@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Set an alias for cating docker files
+# usage of alias: dcat ubuntu /etc/os-release
+
+setupDcat(){
+  alias dcat='docker run -it --rm -a stdout --entrypoint cat'
+}
