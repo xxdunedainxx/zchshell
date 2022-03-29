@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# TextEdit open macro
+
+tEdit () {
+  open -a TextEdit $1
+}

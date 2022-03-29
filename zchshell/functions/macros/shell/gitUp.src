@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Macro for git upstream
+
+gitUp () {
+  branch=$(basename $(git symbolic-ref HEAD))
+  git push --set-upstream origin $branch
+}
